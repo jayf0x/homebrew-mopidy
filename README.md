@@ -21,6 +21,10 @@ If you rely on Brew’s python@3.11 for other projects, proceed carefully.
 /opt/homebrew/bin/python3.11 -m pip config set global.break-system-packages true
 /opt/homebrew/bin/python3.11 -m pip install pykka PyGObject
 ```
+This step was added for https://github.com/mopidy/homebrew-mopidy/issues/45#issuecomment-4004309247
+```sh
+/opt/homebrew/bin/python3.11 -m pip install --upgrade "setuptools<82"
+```
 
 
 Add these runtime paths:
@@ -55,6 +59,7 @@ brew install jonatan-verstraete/mopidy/mopidy --build-from-source
 
 /opt/homebrew/bin/python3.11 -m pip config set global.break-system-packages true
 /opt/homebrew/bin/python3.11 -m pip install pykka PyGObject
+/opt/homebrew/bin/python3.11 -m pip install --upgrade "setuptools<82"
 
 cat >> ~/.zshrc << EOF
 
@@ -68,3 +73,4 @@ source ~/.zshrc
 exec $SHELL
 mopidy
 ```
+
