@@ -1,6 +1,8 @@
 # Mopidy-3.4.2 - hacky fix for MacOs
 This fork aims to bridge gap while waiting for a stable 4.x release.
 
+> ARCHIVED: v6+ resolved [these issues](https://github.com/mopidy/homebrew-mopidy/issues/45#issuecomment-5352866581)
+
 
 **Problem**:
 Current Mopidy code expecting legacy packaging behavior vs Homebrew Python 3.11 constraints.
